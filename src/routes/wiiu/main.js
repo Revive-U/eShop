@@ -18,4 +18,8 @@ router.get('/gub', (request, response) => {
 	response.render('gub', { layout: false });
 });
 
+router.get('/stick', (request, response) => {
+	response.render('stick', { layout: false });
+});
+
 module.exports = router;
