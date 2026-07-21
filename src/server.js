@@ -1,4 +1,4 @@
-process.title = 'Pretendo - eShop';
+process.title = 'Revive U - eShop';
 
 const express = require('express');
 const subdomain = require('express-subdomain');
