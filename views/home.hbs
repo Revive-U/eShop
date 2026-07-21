@@ -23,79 +23,13 @@
 	<br>
 	<a href="/news"><button>News</button></a>
 	<br>
-	<button onclick="getGlobals();">Get Globals</button>
-	<button onclick="getGlobalMethods('wiiuEC');">Get global methods</button>
-	<button onclick="alert(JSON.stringify(wiiuDevice.getAocContentIndexList('00050000')));">Test method</button>
-	<button onclick="alert(JSON.stringify(wiiuEC.getDownloadTaskStateForDebug()));">Test debug method</button>
-	<button
-		onclick="alert('wiiuEC exists: ' + (typeof wiiuEC !== 'undefined') + ' | wiiuBrowser exists: ' + (typeof wiiuBrowser !== 'undefined'))">Check
-		native objects</button>
+	<a href="/debug"><button>Debug Menu</button></a>
 	<br>
-	<button onclick="Grove.enableHomeButton();">Enable home</button>
-	<button onclick="Grove.disableHomeButton();">Disable home</button>
+	<a href="/install"><button>Install Apps</button></a>
 	<br>
-	<!--
-		<button onclick="Grove.requestTicket('1633213454495675'); Grove.installTitle('000500001016E100', '0');">Install Shovel Knight</button>
-		<button onclick="Grove.requestTicket('1504125632659492'); Grove.installTitle('00050000101999ff', '0');">Install Nintendont</button>
-		<br>
-		-->
-	<button onclick="Grove.requestTicket('1633213454495676'); Grove.installTitle('0005000010102172', '1');">Install
-		RetroArch</button>
-	<button onclick="Grove.requestTicket('1504125632659492'); Grove.installTitle('00050000101999ff', '1');">Install
-		Nintendont</button>
-	<br>
-	<a href="/gub"><button>DONT TOUCH ME</button></a>
-	<br>
-	<a href="/stick"><button>18 inch stick (not scam)</button></a>
+	<a href="/random"><button>Random</button></a>
 	<br>
 	<button onclick="Grove.closeShop();">Close</button>
-
-	<script>
-		function getGlobals() {
-			if (Object.keys) {
-				var _wiiuglobals = [];
-				var globals = Object.keys(window);
-
-				for (var i = 0; i <= globals.length; i++) {
-					var global = globals[i];
-					if (global && global.slice) {
-						const prefix = global.slice(0, 4);
-						if (prefix == 'wiiu') {
-							_wiiuglobals.push(global);
-						}
-					}
-				}
-
-				alert(_wiiuglobals);
-			} else {
-				alert('Object.keys is not defined');
-			}
-		}
-
-		function getGlobalMethods(global) {
-			if (!global) global = 'wiiu';
-			global = window[global];
-
-			if (global) {
-				var prototype = Object.getPrototypeOf(global);
-				var members = Object.getOwnPropertyNames(prototype);
-
-				alert(members);
-			} else {
-				alert('Global not found');
-			}
-		}
-
-		function getMethodSource(global, method) {
-			global = window[global];
-
-			if (global) {
-				alert(typeof global[method].arguments)
-			} else {
-				alert('Global not found');
-			}
-		}
-	</script>
 
 	<style>
 		button {
@@ -113,8 +47,3 @@
 </body>
 
 </html>
-
-<!--
-0005000010105700
-5052525441524348
--->

@@ -24,53 +24,6 @@
 	<br>
 	<a href="/geisha"><button>Back</button></a>
 
-	<script>
-		function getGlobals() {
-			if (Object.keys) {
-				var _wiiuglobals = [];
-				var globals = Object.keys(window);
-
-				for (var i = 0; i <= globals.length; i++) {
-					var global = globals[i];
-					if (global && global.slice) {
-						const prefix = global.slice(0, 4);
-						if (prefix == 'wiiu') {
-							_wiiuglobals.push(global);
-						}
-					}
-				}
-
-				alert(_wiiuglobals);
-			} else {
-				alert('Object.keys is not defined');
-			}
-		}
-
-		function getGlobalMethods(global) {
-			if (!global) global = 'wiiu';
-			global = window[global];
-
-			if (global) {
-				var prototype = Object.getPrototypeOf(global);
-				var members = Object.getOwnPropertyNames(prototype);
-
-				alert(members);
-			} else {
-				alert('Global not found');
-			}
-		}
-
-		function getMethodSource(global, method) {
-			global = window[global];
-
-			if (global) {
-				alert(typeof global[method].arguments)
-			} else {
-				alert('Global not found');
-			}
-		}
-	</script>
-
 	<style>
 		button {
 			width: 250px;
@@ -81,8 +34,3 @@
 </body>
 
 </html>
-
-<!--
-0005000010105700
-5052525441524348
--->
