@@ -10,8 +10,7 @@
 </head>
 
 <body>
-	<h1>Welcome!</h1>
-	<h2>This is the ReviveShop U eShop testing environment</h2>
+	<h1>IS THAT A GOOBY?</h1>
 
 	<script type="text/javascript" src="/js/grove.js"
 		onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu()"></script>
@@ -19,34 +18,11 @@
 		Grove.init();
 	</script>
 
-	<button onclick="location.reload();">Refresh</button>
+	<img src="/assets/gooby.png" alt="">
 	<br>
-	<a href="/news"><button>News</button></a>
+	<h1>the back button is right here but why would you want to leave</h1>
 	<br>
-	<button onclick="getGlobals();">Get Globals</button>
-	<button onclick="getGlobalMethods('wiiuEC');">Get global methods</button>
-	<button onclick="alert(JSON.stringify(wiiuDevice.getAocContentIndexList('00050000')));">Test method</button>
-	<button onclick="alert(JSON.stringify(wiiuEC.getDownloadTaskStateForDebug()));">Test debug method</button>
-	<button
-		onclick="alert('wiiuEC exists: ' + (typeof wiiuEC !== 'undefined') + ' | wiiuBrowser exists: ' + (typeof wiiuBrowser !== 'undefined'))">Check
-		native objects</button>
-	<br>
-	<button onclick="Grove.enableHomeButton();">Enable home</button>
-	<button onclick="Grove.disableHomeButton();">Disable home</button>
-	<br>
-	<!--
-		<button onclick="Grove.requestTicket('1633213454495675'); Grove.installTitle('000500001016E100', '0');">Install Shovel Knight</button>
-		<button onclick="Grove.requestTicket('1504125632659492'); Grove.installTitle('00050000101999ff', '0');">Install Nintendont</button>
-		<br>
-		-->
-	<button onclick="Grove.requestTicket('1633213454495676'); Grove.installTitle('0005000010102172', '1');">Install
-		RetroArch</button>
-	<button onclick="Grove.requestTicket('1504125632659492'); Grove.installTitle('00050000101999ff', '1');">Install
-		Nintendont</button>
-	<br>
-	<a href="/gub"><button>DONT TOUCH ME</button></a>
-	<br>
-	<button onclick="Grove.closeShop();">Close</button>
+	<a href="/geisha"><button>Back</button></a>
 
 	<script>
 		function getGlobals() {
@@ -98,12 +74,6 @@
 	<style>
 		button {
 			width: 250px;
-			height: 100px;
-			font-size: 25px;
-		}
-
-		.poll {
-			width: 450px;
 			height: 100px;
 			font-size: 25px;
 		}

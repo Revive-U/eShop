@@ -115,7 +115,11 @@ var Grove = {
 	 */
 	installUpdate: function(titleID) {
 		this.installPatch(titleID);
-	}
+	},
+	
+	closeShop: function () {
+		wiiuBrowser.closeApplication()
+	},
 };
 
 /* Grove init */

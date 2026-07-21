@@ -10,4 +10,12 @@ router.get('/ninja/wood_index.html', (request, response) => {
 	response.render('home', { layout: false });
 });
 
+router.get('/news', (request, response) => {
+	response.render('news', { layout: false });
+});
+
+router.get('/gub', (request, response) => {
+	response.render('gub', { layout: false });
+});
+
 module.exports = router;
