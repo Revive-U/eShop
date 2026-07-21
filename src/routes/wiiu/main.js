@@ -18,6 +18,10 @@ router.get('/debug', (request, response) => {
 	response.render('debug', { layout: false });
 });
 
+router.get('/debugSounds', (request, response) => {
+	response.render('debugSounds', { layout: false });
+});
+
 router.get('/install', (request, response) => {
 	response.render('install', { layout: false });
 });
