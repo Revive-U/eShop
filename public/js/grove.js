@@ -1,6 +1,6 @@
 
-window.onerror = function(error, url, line) {
-	alert(error + ' AT LINE: ' + line); 
+window.onerror = function (error, url, line) {
+	alert(error + ' AT LINE: ' + line);
 };
 
 var Grove = {
@@ -12,21 +12,21 @@ var Grove = {
 	/**
 	 * Test if the client is a WiiU
 	 */
-	isWiiU: function() {
+	isWiiU: function () {
 		return !!Grove._settings.is_wiiu;
 	},
 
 	/**
 	 * Get home button status
 	 */
-	homeButtonEnabled: function() {
+	homeButtonEnabled: function () {
 		return !!Grove._settings.home_button_enabled;
 	},
 
 	/**
 	 * Ends the eShop start up screen and enters the eShop
 	 */
-	endStartUp: function() {
+	endStartUp: function () {
 		if (Grove.isWiiU() && wiiuBrowser.endStartUp) {
 			wiiuBrowser.endStartUp(true);
 		}
@@ -35,7 +35,7 @@ var Grove = {
 	/**
 	 * Enable the home button if disabled
 	 */
-	enableHomeButton: function() {
+	enableHomeButton: function () {
 		if (Grove.isWiiU() && !Grove.homeButtonEnabled()) {
 			wiiuBrowser.lockHomeButtonMenu(false);
 			Grove._settings.home_button_enabled = true;
@@ -45,7 +45,7 @@ var Grove = {
 	/**
 	 * Disable the home button if enabled
 	 */
-	disableHomeButton: function() {
+	disableHomeButton: function () {
 		if (Grove.isWiiU() && Grove.homeButtonEnabled()) {
 			wiiuBrowser.lockHomeButtonMenu(true);
 			Grove._settings.home_button_enabled = false;
@@ -58,7 +58,7 @@ var Grove = {
 	 * This is different than a title ID
 	 * @param {String} ticketID 
 	 */
-	requestTicket: function(ticketID) {
+	requestTicket: function (ticketID) {
 		wiiuEC.ticketDownloadSync(ticketID);
 	},
 
@@ -67,7 +67,7 @@ var Grove = {
 	 * @param {String} titleID 
 	 * @param {String} version 
 	 */
-	installTitle: function(titleID, version) {
+	installTitle: function (titleID, version) {
 		wiiuEC.registerTitleDownloadTask(titleID, version);
 	},
 
@@ -76,7 +76,7 @@ var Grove = {
 	 * @param {String} titleID 
 	 * @param {String} version 
 	 */
-	installAddonContent: function(titleID, version) {
+	installAddonContent: function (titleID, version) {
 		// No idea what these are for but they were needed for MK8 DLC
 		var jsonString = JSON.stringify({
 			indexes: [
@@ -97,7 +97,7 @@ var Grove = {
 	 * @param {String} titleID 
 	 * @param {String} version 
 	 */
-	installDLC: function(titleID, version) {
+	installDLC: function (titleID, version) {
 		this.installAddonContent(titleID, version);
 	},
 
@@ -105,7 +105,7 @@ var Grove = {
 	 * Starts the update installation process
 	 * @param {String} titleID
 	 */
-	installPatch: function(titleID) {
+	installPatch: function (titleID) {
 		wiiuEC.registerPatchTitleDownloadTask(titleID);
 	},
 
@@ -113,11 +113,12 @@ var Grove = {
 	 * Alias for Grove.installPatch
 	 * @param {String} titleID
 	 */
-	installUpdate: function(titleID) {
+	installUpdate: function (titleID) {
 		this.installPatch(titleID);
 	},
-	
+
 	closeShop: function () {
+		wiiuSound.playSoundByName('SE_WAVE_EXIT', 1);
 		wiiuBrowser.closeApplication()
 	},
 };
