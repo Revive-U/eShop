@@ -3,34 +3,155 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
-    <meta http-equiv="Content-Style-Type" content="text/css">
     <title>Pretendo eShop</title>
     <link rel="stylesheet" href="/css/minified/index.css">
+    <style>
+        button {
+            width: 250px;
+            height: 60px;
+            font-size: 18px;
+            margin: 4px;
+        }
+
+        br {
+            line-height: 0;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Sounds</h1>
     <h2>List of found sounds on the Wii U that can be used by the Wii U Wood API (wiiuSound)</h2>
-    <h3>(specifically sounds that work in the eShop applet)</h3>
-
-    <script type="text/javascript" src="/js/grove.js"
+    <h3>(specifically sounds that are in the eShop applet)</h3>
+    <h4>note: some of these may not work</h4>
+    <script src="/js/grove.js"
         onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu()"></script>
-    <script lang="javascript">
-        Grove.init();
-    </script>
-
-    <button onclick="wiiuSound.playSoundByName('SE_WAVE_EXIT', 1);">SE_WAVE_EXIT</button>
-    <br>
+    <script>Grove.init();</script>
     <a href="/debug"><button>Back</button></a>
-
-    <style>
-        button {
-            width: 250px;
-            height: 100px;
-            font-size: 25px;
-        }
-    </style>
+    <button onclick="wiiuSound.playSoundByName('BGM_WOOD_BOOT_0',3);">BGM_WOOD_BOOT_0</button><br>
+    <button onclick="wiiuSound.playSoundByName('BGM_WOOD_MAIN',3);">BGM_WOOD_MAIN</button><br>
+    <button onclick="wiiuSound.playSoundByName('BGM_WOOD_SETTING',3);">BGM_WOOD_SETTING</button><br>
+    <button onclick="wiiuSound.playSoundByName('BGM_WOOD_MAIN_BOSS',3);">BGM_WOOD_MAIN_BOSS</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_NFC_GUIDE',1);">SE_NFC_GUIDE</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_NFC_FINISH',1);">SE_NFC_FINISH</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_NFC_ERROR',1);">SE_NFC_ERROR</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_NFC_UNFINISH',1);">SE_NFC_UNFINISH</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_SURF_SITE_FEED_L',1);">SE_SURF_SITE_FEED_L</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_SF_TOUCH_ON',1);">SE_SF_TOUCH_ON</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_SF_TOUCHCANCEL',1);">SE_SF_TOUCHCANCEL</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_SF_CANCEL_TOUCHOFF',1);">SE_SF_CANCEL_TOUCHOFF</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_SF_COPY_TOUCHOFF',1);">SE_SF_COPY_TOUCHOFF</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_SF_VW_TVNOMI',1);">SE_SF_VW_TVNOMI</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_SF_VW_TVNOMI2',1);">SE_SF_VW_TVNOMI2</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_SF_ZOOM_DOWN',1);">SE_SF_ZOOM_DOWN</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_SF_ZOOM_DOWN_LIMIT',1);">SE_SF_ZOOM_DOWN_LIMIT</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_SF_ZOOM_UP',1);">SE_SF_ZOOM_UP</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_SF_ZOOM_UP_LIMIT',1);">SE_SF_ZOOM_UP_LIMIT</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_SF_LAST5MIN',1);">SE_SF_LAST5MIN</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_DRC_TOUCH_TRG',1);">SE_WAVE_DRC_TOUCH_TRG</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_DPD_TOUCH_TRG',1);">SE_WAVE_DPD_TOUCH_TRG</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_NAVI_DRC_TRG',1);">SE_WAVE_NAVI_DRC_TRG</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_NAVI_WPAD_TRG',1);">SE_WAVE_NAVI_WPAD_TRG</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_HWKEY_MENU_TRG',1);">SE_WAVE_HWKEY_MENU_TRG</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_DPD_SELECT',1);">SE_WAVE_DPD_SELECT</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_MOVE_NAVI_DRC',1);">SE_WAVE_MOVE_NAVI_DRC</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_MOVE_NAVI_WPAD',1);">SE_WAVE_MOVE_NAVI_WPAD</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_SCROLL_LIMIT',1);">SE_WAVE_SCROLL_LIMIT</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_SCROLL_PAGE',1);">SE_WAVE_SCROLL_PAGE</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_ZOOM_IN',1);">SE_WAVE_ZOOM_IN</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_ZOOM_OUT',1);">SE_WAVE_ZOOM_OUT</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_ZOOM_IN_TOUCH_OFF',1);">SE_WAVE_ZOOM_IN_TOUCH_OFF</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_ZOOM_OUT_TOUCH_OFF',1);">SE_WAVE_ZOOM_OUT_TOUCH_OFF</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_ZOOM_IN_WAIT',1);">SE_WAVE_ZOOM_IN_WAIT</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_ZOOM_OUT_WAIT',1);">SE_WAVE_ZOOM_OUT_WAIT</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_ZOOM_IN_LIMIT',1);">SE_WAVE_ZOOM_IN_LIMIT</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_ZOOM_OUT_LIMIT',1);">SE_WAVE_ZOOM_OUT_LIMIT</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_ZOOM_IN_LIMIT_WAIT',1);">SE_WAVE_ZOOM_IN_LIMIT_WAIT</button><br>
+    <button
+        onclick="wiiuSound.playSoundByName('SE_WAVE_ZOOM_OUT_LIMIT_WAIT',1);">SE_WAVE_ZOOM_OUT_LIMIT_WAIT</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_MOVIE_TRICK_START',1);">SE_WAVE_MOVIE_TRICK_START</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WAVE_MOVIE_TRICK_CANCEL',1);">SE_WAVE_MOVIE_TRICK_CANCEL</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_DRC_TOUCH_TRG',1);">SE_WOOD_DRC_TOUCH_TRG</button><br>
+    <button
+        onclick="wiiuSound.playSoundByName('SE_WOOD_DRC_TOUCH_REGION_APPEAR',1);">SE_WOOD_DRC_TOUCH_REGION_APPEAR</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_HWKEY_MENU_TRG',1);">SE_WOOD_HWKEY_MENU_TRG</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_OK',1);">SE_WOOD_OK</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_OK_SUB',1);">SE_WOOD_OK_SUB</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_DECIDE',1);">SE_WOOD_DECIDE</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_CANCEL',1);">SE_WOOD_CANCEL</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_OFFBUTTON',1);">SE_WOOD_OFFBUTTON</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_DROPDOWN',1);">SE_WOOD_DROPDOWN</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_BACK',1);">SE_WOOD_BACK</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_TOP',1);">SE_WOOD_TOP</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_OPEN_MENU',1);">SE_WOOD_OPEN_MENU</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_RADIOBUTTON_CHECK',1);">SE_WOOD_RADIOBUTTON_CHECK</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_CHECKBOX_CHECK',1);">SE_WOOD_CHECKBOX_CHECK</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_CHECKBOX_UNCHECK',1);">SE_WOOD_CHECKBOX_UNCHECK</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_TEXTBOX',1);">SE_WOOD_TEXTBOX</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_PULLDOWN',1);">SE_WOOD_PULLDOWN</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_SELECT_TAB',1);">SE_WOOD_SELECT_TAB</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_RESET',1);">SE_WOOD_RESET</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_DELETE',1);">SE_WOOD_DELETE</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_CHECKBUTTON_CHECK',1);">SE_WOOD_CHECKBUTTON_CHECK</button><br>
+    <button
+        onclick="wiiuSound.playSoundByName('SE_WOOD_CHECKBUTTON_UNCHECK',1);">SE_WOOD_CHECKBUTTON_UNCHECK</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_SELECT_MOVIE',1);">SE_WOOD_SELECT_MOVIE</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_SELECT_IMAGE',1);">SE_WOOD_SELECT_IMAGE</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_SELECT_BANNER',1);">SE_WOOD_SELECT_BANNER</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_JUMP_OLV',1);">SE_WOOD_JUMP_OLV</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_JUMP',1);">SE_WOOD_JUMP</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_STAR_1',1);">SE_WOOD_STAR_1</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_STAR_2',1);">SE_WOOD_STAR_2</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_STAR_3',1);">SE_WOOD_STAR_3</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_STAR_4',1);">SE_WOOD_STAR_4</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_STAR_5',1);">SE_WOOD_STAR_5</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_BOOT_BUTTON_START',1);">SE_WOOD_BOOT_BUTTON_START</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_BOOT_BUTTON_STOP',1);">SE_WOOD_BOOT_BUTTON_STOP</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_BOOT_SCROLL_1',1);">SE_WOOD_BOOT_SCROLL_1</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_BOOT_SCROLL_2',1);">SE_WOOD_BOOT_SCROLL_2</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_BOOT_SCROLL_3',1);">SE_WOOD_BOOT_SCROLL_3</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_BOOT_SCROLL_STOP_1',1);">SE_WOOD_BOOT_SCROLL_STOP_1</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_BOOT_SCROLL_STOP_2',1);">SE_WOOD_BOOT_SCROLL_STOP_2</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_BOOT_SCROLL_STOP_3',1);">SE_WOOD_BOOT_SCROLL_STOP_3</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_BOOT_SUCCESS',1);">SE_WOOD_BOOT_SUCCESS</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_EXIT',1);">SE_WOOD_EXIT</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_WOOD_INVALID',1);">SE_WOOD_INVALID</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_CMN_DPD_SELECT',1);">SE_CMN_DPD_SELECT</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_CMN_CURSOR_SELECT',1);">SE_CMN_CURSOR_SELECT</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_CMN_TOUCH_ON',1);">SE_CMN_TOUCH_ON</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_CMN_TOUCH_CANCEL',1);">SE_CMN_TOUCH_CANCEL</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_ERROR_APPEAR',1);">SE_BAR_ERROR_APPEAR</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_WAITING',1);">SE_BAR_WAITING</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_SCROLLBAR_SELECT',1);">SE_BAR_SCROLLBAR_SELECT</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_SCROLL',1);">SE_BAR_SCROLL</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_SCROLL_END',1);">SE_BAR_SCROLL_END</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_DECIDE',1);">SE_BAR_DECIDE</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_DECIDE_TOUCH_OFF',1);">SE_BAR_DECIDE_TOUCH_OFF</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_SUB_DECIDE',1);">SE_BAR_SUB_DECIDE</button><br>
+    <button
+        onclick="wiiuSound.playSoundByName('SE_BAR_SUB_DECIDE_TOUCH_OFF',1);">SE_BAR_SUB_DECIDE_TOUCH_OFF</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_CANCEL',1);">SE_BAR_CANCEL</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_CANCEL_TOUCH_OFF',1);">SE_BAR_CANCEL_TOUCH_OFF</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_BTN',1);">SE_BAR_BTN</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_BTN_TOUCH_OFF',1);">SE_BAR_BTN_TOUCH_OFF</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_BTN_CHECK',1);">SE_BAR_BTN_CHECK</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_BTN_CHECK_TOUCH_OFF',1);">SE_BAR_BTN_CHECK_TOUCH_OFF</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_BTN_FINISH',1);">SE_BAR_BTN_FINISH</button><br>
+    <button
+        onclick="wiiuSound.playSoundByName('SE_BAR_BTN_FINISH_TOUCH_OFF',1);">SE_BAR_BTN_FINISH_TOUCH_OFF</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_BTN_ZOOM_IN',1);">SE_BAR_BTN_ZOOM_IN</button><br>
+    <button
+        onclick="wiiuSound.playSoundByName('SE_BAR_BTN_ZOOM_IN_TOUCH_OFF',1);">SE_BAR_BTN_ZOOM_IN_TOUCH_OFF</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_BTN_ZOOM_OUT',1);">SE_BAR_BTN_ZOOM_OUT</button><br>
+    <button
+        onclick="wiiuSound.playSoundByName('SE_BAR_BTN_ZOOM_OUT_TOUCH_OFF',1);">SE_BAR_BTN_ZOOM_OUT_TOUCH_OFF</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_BTN_PAGE_CHANGE',1);">SE_BAR_BTN_PAGE_CHANGE</button><br>
+    <button onclick="wiiuSound.playSoundByName('SE_BAR_SCROLL_MSG',1);">SE_BAR_SCROLL_MSG</button><br>
+    <button
+        onclick="wiiuSound.playSoundByName('SE_BAR_SWKBD_STRINGS_SELECT',1);">SE_BAR_SWKBD_STRINGS_SELECT</button><br>
+    <button
+        onclick="wiiuSound.playSoundByName('SE_BAR_SWKBD_STRINGS_CURSOR',1);">SE_BAR_SWKBD_STRINGS_CURSOR</button><br>
+    <a href="/debug"><button>Back</button></a>
 </body>
 
 </html>
