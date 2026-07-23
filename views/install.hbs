@@ -24,12 +24,14 @@
 		<button onclick="Grove.requestTicket('1504125632659492'); Grove.installTitle('00050000101999ff', '0');">Install Nintendont</button>
 		<br>
 		-->
-	<button onclick="Grove.requestTicket('1633213454495676'); Grove.installTitle('0005000010102172', '1');">Install
+	<button
+		onclick="wiiuSound.playSoundByName('SE_WOOD_BOOT_SUCCESS',1); Grove.requestTicket('1633213454495676'); Grove.installTitle('0005000010102172', '1');">Install
 		RetroArch</button>
-	<button onclick="Grove.requestTicket('1504125632659492'); Grove.installTitle('00050000101999ff', '1');">Install
+	<button
+		onclick="wiiuSound.playSoundByName('SE_WOOD_BOOT_SUCCESS',1); Grove.requestTicket('1504125632659492'); Grove.installTitle('00050000101999ff', '1');">Install
 		Nintendont</button>
 	<br>
-	<a href="/geisha"><button>Back</button></a>
+	<a href="/geisha"><button onclick="wiiuSound.playSoundByName('SE_WOOD_BACK',1);">Back</button></a>
 
 	<style>
 		button {

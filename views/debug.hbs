@@ -19,20 +19,21 @@
 		Grove.init();
 	</script>
 
-	<button onclick="getGlobals();">Get Globals</button>
-	<button onclick="getGlobalMethods('wiiuEC');">Get global methods</button>
-	<button onclick="alert(JSON.stringify(wiiuDevice.getAocContentIndexList('00050000')));">Test method</button>
-	<button onclick="alert(JSON.stringify(wiiuEC.getDownloadTaskStateForDebug()));">Test debug method</button>
+	<button onclick="wiiuSound.playSoundByName('SE_WOOD_OK',1); getGlobals();">Get Globals</button>
+	<button onclick="wiiuSound.playSoundByName('SE_WOOD_OK',1); getGlobalMethods('wiiuEC');">Get global methods</button>
 	<button
-		onclick="alert('wiiuEC exists: ' + (typeof wiiuEC !== 'undefined') + ' | wiiuBrowser exists: ' + (typeof wiiuBrowser !== 'undefined'))">Check
-		native objects</button>
+		onclick="wiiuSound.playSoundByName('SE_WOOD_OK',1); alert(JSON.stringify(wiiuDevice.getAocContentIndexList('00050000')));">Test
+		method</button>
+	<button
+		onclick="wiiuSound.playSoundByName('SE_WOOD_OK',1); alert(JSON.stringify(wiiuEC.getDownloadTaskStateForDebug()));">Test
+		debug method</button>
 	<br>
-	<button onclick="Grove.enableHomeButton();">Enable home</button>
-	<button onclick="Grove.disableHomeButton();">Disable home</button>
+	<button onclick="Grove.enableHomeButton(); wiiuSound.playSoundByName('SE_WOOD_OK',1);">Enable home</button>
+	<button onclick="Grove.disableHomeButton(); wiiuSound.playSoundByName('SE_WOOD_OK',1);">Disable home</button>
 	<br>
-	<a href="/debugSounds"><button>Sounds</button></a>
+	<a href="/debugSounds" onclick="wiiuSound.playSoundByName('SE_WOOD_OK',1);"><button>Sounds</button></a>
 	<br>
-	<a href="/geisha"><button>Back</button></a>
+	<a href="/geisha"><button onclick="wiiuSound.playSoundByName('SE_WOOD_BACK',1);">Back</button></a>
 
 	<script>
 		function getGlobals() {

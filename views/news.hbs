@@ -19,7 +19,7 @@
 		Grove.init();
 	</script>
 
-	<button onclick="location.reload();">Refresh</button>
+	<button onclick="location.reload(); wiiuSound.playSoundByName('SE_WOOD_OK',1);">Refresh</button>
 	<br>
 
 	<div class="info-card">
@@ -29,13 +29,13 @@
 			Implementation of the SOAP server to allow for downloads.
 		</p>
 
-		<button>
+		<button onclick="wiiuSound.playSoundByName('SE_WOOD_OK',1);">
 			Details Unavailable
 		</button>
 	</div>
 
 	<br>
-	<a href="/geisha"><button>Back</button></a>
+	<a href="/geisha"><button onclick="wiiuSound.playSoundByName('SE_WOOD_BACK',1);">Back</button></a>
 
 	<style>
 		button {
